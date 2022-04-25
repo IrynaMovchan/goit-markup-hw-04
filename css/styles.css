@@ -61,6 +61,19 @@ img {
   padding-bottom: 94px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowarp;
+  clip-path: insert(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Header */
 
 .logo {
@@ -95,6 +108,11 @@ img {
   display: flex;
 }
 
+.header-item {
+  display: flex;
+  align-items: center;
+}
+
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -117,6 +135,11 @@ img {
   margin-left: auto;
 }
 
+.icon-contacts {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .header-email,
 .header-phone {
   font-weight: 500;
@@ -133,6 +156,7 @@ img {
 .header-phone:focus,
 .current {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Footer */
@@ -150,6 +174,11 @@ footer .logo {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .address-item {
@@ -171,14 +200,68 @@ footer .logo {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer .socials {
+  margin-left: 54px;
+  display: block;
+}
+
+.socials-call {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--contacts-color);
+  margin-bottom: 20px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--contacts-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socials-link:hover {
+  background-color: var(--accent-color);
+}
+
+/* .instagram,
+.twitter,
+.facebook,
+.linkedin {
+  fill: var(--contacts-color);
+} */
+
 /* Index */
 
 /* ------HERO------ */
 
 .hero {
-  background: var(--background-hero-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-color: var(--background-hero-color);
+  padding: 200px 0;
+
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero .container {
@@ -217,8 +300,8 @@ footer .logo {
 /* ------FEATURES------ */
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
 }
 
 .features-list {
@@ -230,6 +313,21 @@ footer .logo {
 .features-item {
   min-width: 270px;
   margin-left: 30px;
+}
+
+.features-icon-bg {
+  display: flex;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--background-filters-btn-color);
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.features-icon {
+  align-items: center;
 }
 
 .features-name {
@@ -268,7 +366,8 @@ footer .logo {
 /* ------OUR TEAM------ */
 
 .actions-name,
-.team-name {
+.team-name,
+.clients-name {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -278,8 +377,8 @@ footer .logo {
 
 .team {
   background-color: var(--background-filters-btn-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
 }
 
 .team-name {
@@ -295,6 +394,7 @@ footer .logo {
 .worker-card {
   padding-bottom: 30px;
   margin-left: 30px;
+  background-color: var(--contacts-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -317,22 +417,31 @@ footer .logo {
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+
+.team .socials-link {
+  fill: #afb1b8;
+}
+
+.team .socials-link:hover {
+  fill: var(--contacts-color);
+}
+
+/* --Постоянные клиенты-- */
+
+.clients {
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
+}
+
+.clients-cards {
+  display: flex;
+  flex-basis: calc((100% - 180px) / 6);
+  margin-left: -30px;
 }
 
 /* Portfolio */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowarp;
-  clip-path: insert(100%);
-  clip: rect(0 0 0 0);
-  owerflow: hidden;
-}
 
 .filters-item {
   margin-bottom: 50px;
