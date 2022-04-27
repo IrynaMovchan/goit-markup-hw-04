@@ -202,13 +202,14 @@ footer .logo {
   line-height: 1.71;
   color: var(--contacts-color);
 }
-.footer-address:hover,
-.footer-address:focus {
-  color: var(--accent-color);
-}
 
 .footer-email-phone {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email-phone:hover,
+.footer-email-phone:focus {
+  color: var(--accent-color);
 }
 
 .footer .socials {
